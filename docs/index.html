@@ -3,34 +3,91 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Add .Staples. VRChat Tools to VCC and choose your Unity tools.">
+  <meta name="description" content="VCC package catalog for .Staples. VRChat Tools.">
+  <meta name="theme-color" content="#08090a">
   <title>.Staples. VRChat Tools</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main>
-    <header>
-      <h1>.Staples. VRChat Tools</h1>
-      <p>Add this catalog once, then choose the tools you want in VCC.</p>
-      <a class="button" href="vcc://vpm/addRepo?url=https%3A%2F%2Fvrc-staples.github.io%2Fvpm-packages%2Findex.json">Add to VCC</a>
-      <details>
-        <summary>Add the catalog manually</summary>
-        <p>In VCC, open Settings, select Packages, and add this repository URL:</p>
-        <p><a href="index.json"><code>https://vrc-staples.github.io/vpm-packages/index.json</code></a></p>
-      </details>
-    </header>
-    <section aria-labelledby="asm-lite">
-      <h2 id="asm-lite">Avatar Settings Manager - Lite</h2>
-      <p class="secondary">Stable version 1.1.0</p>
-      <p>Save, load, and clear avatar expression parameter presets.</p>
-      <p>Requires Unity 2022.3, the VRChat Avatar SDK, and
-        <a href="https://vrcfury.com/download">VRCFury</a>.</p>
-      <p><a href="https://github.com/VRC-Staples/AvatarSettingsManager-Lite">Package documentation</a>
-        <a href="https://github.com/VRC-Staples/AvatarSettingsManager-Lite/releases/tag/1.1.0">Release notes</a></p>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner container">
+      <a class="brand" href="./" aria-label=".Staples. VRChat Tools home">
+        <span>.Staples. <span class="brand-suffix">VRChat Tools</span></span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="https://github.com/VRC-Staples/vpm-packages">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="hero" aria-labelledby="hero-title">
+      <h1 id="hero-title">.Staples. VRChat Tools</h1>
+      <div class="hero-actions">
+        <a class="install-button" href="vcc://vpm/addRepo?url=https%3A%2F%2Fvrc-staples.github.io%2Fvpm-packages%2Findex.json">Add to VCC</a>
+        <span class="hero-note">Creator Companion required</span>
+      </div>
     </section>
-    <footer>
-      <a href="https://github.com/VRC-Staples/vpm-packages">Catalog on GitHub</a>
-    </footer>
+
+    <section id="tools" class="catalog-frame" aria-label="Available tools">
+      <div class="frame-header">
+        <p>Available tools</p>
+        <span class="channel-label">Stable releases</span>
+      </div>
+      <article aria-labelledby="asm-lite">
+        <div class="tool-body">
+          <div class="tool-icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <path d="M7 9h18M7 16h18M7 23h18" stroke="currentColor"
+                stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="12" cy="9" r="3"/>
+              <circle cx="21" cy="16" r="3"/>
+              <circle cx="14" cy="23" r="3"/>
+            </svg>
+          </div>
+          <div class="tool-copy">
+            <h2 id="asm-lite">Avatar Settings Manager - Lite</h2>
+            <p class="tool-description">Drop-in avatar settings manager with Save, Load,
+              and Clear Preset for expression parameter presets across 1-8 configurable slots.</p>
+          </div>
+          <dl class="metadata">
+            <div><dt>Version</dt><dd>1.1.0</dd></div>
+            <div><dt>Unity</dt><dd>2022.3</dd></div>
+            <div>
+              <dt>Requires</dt>
+              <dd>Avatar SDK<br><a href="https://vrcfury.com/download">VRCFury</a></dd>
+            </div>
+          </dl>
+        </div>
+        <div class="frame-footer">
+          <div class="tool-links">
+            <a href="https://github.com/VRC-Staples/AvatarSettingsManager-Lite">Documentation</a>
+            <a href="https://github.com/VRC-Staples/AvatarSettingsManager-Lite/releases/tag/1.1.0">Release notes</a>
+          </div>
+          <code class="package-id">com.staples.asm-lite</code>
+        </div>
+      </article>
+    </section>
+
+    <details id="setup" class="manual-setup">
+      <summary>
+        <span>Add the catalog manually</span>
+        <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="m4 6 4 4 4-4" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </summary>
+      <div class="manual-content">
+        <p>In VCC, open Settings, select Packages, and add this repository URL:</p>
+        <a class="feed-url" href="https://vrc-staples.github.io/vpm-packages/index.json"><code>https://vrc-staples.github.io/vpm-packages/index.json</code></a>
+      </div>
+    </details>
   </main>
+
+  <footer class="site-footer container">
+    <a href="https://vrc-staples.github.io/vpm-packages/index.json">Catalog feed</a>
+    <a href="https://vcc.docs.vrchat.com/vpm/packages/">VCC help</a>
+  </footer>
 </body>
 </html>

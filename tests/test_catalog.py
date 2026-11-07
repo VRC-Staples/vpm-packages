@@ -59,7 +59,7 @@ class CatalogTests(unittest.TestCase):
         url = urlsplit(install_links[0])
         self.assertEqual((url.scheme, url.netloc, url.path), ("vcc", "vpm", "/addRepo"))
         self.assertEqual(parse_qs(url.query), {"url": [FEED_URL]})
-        self.assertIn("index.json", page.links)
+        self.assertIn(FEED_URL, page.links)
         self.assertFalse(page.scripts)
 
     def test_package_names_and_manual_feed_url_are_visible(self):
