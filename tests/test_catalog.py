@@ -62,11 +62,22 @@ class CatalogTests(unittest.TestCase):
         self.assertIn(FEED_URL, page.links)
         self.assertFalse(page.scripts)
 
-    def test_package_names_and_manual_feed_url_are_visible(self):
+    def test_package_ids_and_manual_feed_url_are_visible(self):
         self.assertIn(FEED_URL, self.html)
+        for package_id in self.feed["packages"]:
+            self.assertIn(package_id, self.html)
+
+    def test_vcc_branding_is_separate_from_the_website_label(self):
         for package in self.feed["packages"].values():
             for manifest in package["versions"].values():
-                self.assertIn(manifest["displayName"], self.html)
+                with self.subTest(package=manifest["name"], version=manifest["version"]):
+                    self.assertTrue(manifest["displayName"].startswith(".Staples. - "))
+        manifest = self.feed["packages"]["com.staples.asm-lite"]["versions"]["1.1.0"]
+        self.assertEqual(
+            manifest["displayName"], ".Staples. - Avatar Settings Manager - Lite"
+        )
+        self.assertIn("Avatar Settings Manager - Lite", self.html)
+        self.assertNotIn(".Staples. - Avatar Settings Manager - Lite", self.html)
 
 
 if __name__ == "__main__":

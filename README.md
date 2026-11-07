@@ -30,8 +30,13 @@ The package's own license applies to its contents; this catalog does not relicen
 
 ## Update the catalog
 
+VCC package names use `.Staples. - <Tool Name>` in each catalog entry's `displayName`.
+Keep website labels and machine-readable package `name` IDs unchanged.
+Apply this prefix to catalog display metadata only. Do not replace release ZIPs for it.
+
 1. Publish an approved, versioned package ZIP in the tool's own repository.
 2. Copy its root `package.json` into the matching entry in `docs/index.json`.
+   Apply the VCC display-name prefix above.
 3. Add its fixed release download URL and the ZIP's SHA-256 as `zipSHA256`.
 4. Update the package information in `docs/index.html` and run the check below.
 5. Commit and push the reviewed changes to `main` to publish through GitHub Pages.
