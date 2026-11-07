@@ -1,0 +1,37 @@
+{
+  "name": ".Staples. VRChat Tools",
+  "id": "com.staples.vpm",
+  "url": "https://vrc-staples.github.io/vpm-packages/index.json",
+  "author": ".Staples.",
+  "packages": {
+    "com.staples.asm-lite": {
+      "versions": {
+        "1.1.0": {
+          "name": "com.staples.asm-lite",
+          "displayName": "Avatar Settings Manager - Lite",
+          "version": "1.1.0",
+          "unity": "2022.3",
+          "description": "Drop-in avatar settings manager with Save, Load, and Clear Preset for expression parameter presets across 1-8 configurable slots.",
+          "author": {
+            "name": ".Staples."
+          },
+          "vpmDependencies": {
+            "com.vrchat.avatars": ">=3.7.0",
+            "com.vrcfury.vrcfury": ">=1.999.0"
+          },
+          "keywords": [
+            "VRChat",
+            "Avatar",
+            "VRCFury",
+            "ASM-Lite",
+            "Parameters",
+            "Presets"
+          ],
+          "license": "GPL-3.0",
+          "url": "https://github.com/VRC-Staples/AvatarSettingsManager-Lite/releases/download/1.1.0/com.staples.asm-lite-1.1.0.zip",
+          "zipSHA256": "953be8e26b08774a53a695b901a74f767ccd4298494188ae82a81a741f77eaab"
+        }
+      }
+    }
+  }
+}
