@@ -20,19 +20,26 @@ The catalog ID is `com.staples.vpm`. Keep this ID and the feed URL stable.
 | Package | Version | Source |
 | --- | --- | --- |
 | Avatar Settings Manager - Lite | 1.1.0 | [AvatarSettingsManager-Lite](https://github.com/VRC-Staples/AvatarSettingsManager-Lite) |
+| Avatar Settings Manager - Lite | 1.2.0-beta.2 (prerelease) | [AvatarSettingsManager-Lite](https://github.com/VRC-Staples/AvatarSettingsManager-Lite) |
 
 ASM-Lite retains the package ID `com.staples.asm-lite` and its existing release downloads.
 It requires Unity 2022.3, the VRChat Avatar SDK, and VRCFury.
 The existing ASM-Lite-only catalog remains available and unchanged.
 
-Maintenance prereleases and nightly builds are not included in this first catalog.
+The maintenance prerelease is opt-in. Nightly builds are not listed.
 The package's own license applies to its contents; this catalog does not relicense packages.
+
+Before you install a prerelease, back up your Unity project.
+
+1. In VCC, open **Settings > Packages**.
+2. Enable **Show Pre-Release Packages**.
+3. Open your project's package list and select `1.2.0-beta.2` for ASM-Lite.
 
 ## Update the catalog
 
-VCC package names use `.Staples. - <Tool Name>` in each catalog entry's `displayName`.
+New releases use `.Staples. - <Tool Name>` in the package manifest and catalog entry's `displayName`.
 Keep website labels and machine-readable package `name` IDs unchanged.
-Apply this prefix to catalog display metadata only. Do not replace release ZIPs for it.
+Preserve existing release ZIPs. For older releases, apply the prefix to catalog metadata only.
 
 1. Publish an approved, versioned package ZIP in the tool's own repository.
 2. Copy its root `package.json` into the matching entry in `docs/index.json`.
@@ -43,6 +50,8 @@ Apply this prefix to catalog display metadata only. Do not replace release ZIPs 
 
 Do not point version entries at overwritable `nightly` or `latest` downloads.
 Do not change existing package IDs to rename the catalog.
+Before merging maintenance into main, set the package manifest to the approved stable version.
+After the stable release is published, add its versioned ZIP to this catalog.
 
 ```sh
 python -m unittest discover -s tests
